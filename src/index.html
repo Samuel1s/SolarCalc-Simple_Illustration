@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="./img/solar-x.ico" type="image/png">
+
+        <!-- Planta Carnívora main stylesheet. -->
+        <link rel="stylesheet" href="./css/index.css">
+
+        <title>Simple Ilustration</title>
+    </head>
+    <body>
+        <header>
+            <h3>
+                <img id="logo" src="./img/solar-logo.png" alt="Ícone painel solar">
+                Demonstração
+            </h3>
+            <nav id="menu-principal">
+                <ul>
+                  <li><a href="#gravitacao">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section >
+                <article id="result">
+                    <div class="foto-selecionada">
+                        <img src="./img/simulacao-casa1.png" draggable="false">
+                    </div>
+                </article>    
+
+                <article id="datas">
+                    <div>
+                        <div>
+                            <h4>Economia Mensal</h4>
+                            <p>R$: xx:xx</p>
+                        </div>
+                        <div>
+                            <h4>Estimativa </h4>
+                            <p>R$: xxxx:xx</p>
+                        </div>
+                        <div>
+                            <h4>Módulos</h4>
+                            <p>7 paineis</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Árvores plantadas</h4>
+                            <p>Equivale a x árvores</p>
+                        </div>
+                        <div>
+                            <h4>Redução CO2</h4>
+                            <p>Equivalente a 2.3 tonelas</p>
+                        </div>
+                        <div>
+                            <h4>PayOff</h4>
+                            <span id="set_payoff"></span><span>  Ano(s)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="data" class="controles">
+                    <fieldset>
+                        <legend>Dados para calcular</legend>
+
+                        <div class="conjunto-controles">
+                            <label>
+                              Estado:
+                              <select id="filtro-do-estado">
+                                <option value="ac">AC</option>
+                                <option value="al">AL</option>
+                                <option value="ap">AP</option>
+                                <option value="am">AM</option>
+                                <option value="ba">BA</option>
+                                <option value="ce">CE</option>
+                                <option value="df">DF</option>
+                                <option value="es">ES</option>
+                                <option value="go">GO</option>
+                                <option value="ma">MA</option>
+                                <option value="mt">MT</option>
+                                <option value="ms">MS</option>
+                                <option value="mg">MG</option>
+                                <option value="pa">PA</option>
+                                <option value="pb">PB</option>
+                                <option value="pr">PR</option>
+                                <option value="pe">PE</option>
+                                <option value="pi">PI</option>
+                                <option value="rj">RJ</option>
+                                <option value="rn">RN</option>
+                                <option value="rs">RS</option>
+                                <option value="ro">RO</option>
+                                <option value="rr">RR</option>
+                                <option value="sc">SC</option>
+                                <option value="sp">SP</option>
+                                <option value="se">SE</option>
+                                <option value="to">TO</option>
+                              </select>
+                            </label>
+                        </div>
+
+                        <div class="conjunto-controles">
+                            <label>
+                              Região:
+                              <select id="filtro-da-regiao">
+                                <option value="norte">Norte</option>
+                                <option value="nordeste">Nordeste</option>
+                                <option value="centro_oeste">Centro-Oeste</option>
+                                <option value="sudeste">Sudeste</option>
+                                <option value="sul">Sul</option>
+                              </select>
+                            </label>
+                            <label>
+                                Interesse:
+                                <select id="filtro-do-interesse">
+                                  <option value="residencial">Residencial</option>
+                                  <option value="comercial">Comercial</option>
+                                </select>
+                              </label>
+                        </div>
+
+                        <div class="conjunto-controles">
+                            <label>Consumo Mensal:<input type="number" value="250" id="consumo-mensal"></label>
+                            <label>Custo médio da Instalação:<input type="number" value="2300" id="custo-instalacao"></label>
+                        </div>
+
+                        <div class="conjunto-controles">
+                            <label class="cancel-arrow">Valor Médio Tarifa:<input type="number" value="250" id="tarifa-media"></label>
+                        </div>
+
+                        <div id="style-button">
+                            <button id="calculate"> Calcular </button>
+                        </div>
+
+                    </fieldset>
+                </article> 
+            </section>
+        </main>
+        <footer>
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

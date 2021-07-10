@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+/* --- Root --- */
+
+:root {
+    --grey-1: #a9a9ba;
+    --grey-2: #6f6f7a;
+    --grey-3: #35353b;
+    --grey-4: #2a2a2e;
+    --grey-5: #fff8;
+    --yellow-1: #fdce00;
+    --blue-1: #6dc7e0;
+    --green-style: #2dc2b7;
+
+
+    --border-color: silver;
+    --control-color: #333;
+    --input-padding: 0.3em;
+    --text-size: 0.8em;
+    --round-corners: 4px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+/* -- Header -- */
+header {
+    padding: 1em;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--grey-3);
+}
+
+header h3 {
+    margin: 0;
+    font-weight: 400
+}
+
+header nav ul {
+    padding-right: 1em;
+    list-style-type: none
+}
+
+li a {
+    color: white;
+    font-weight: 300;
+    text-decoration: none
+}
+
+
+#logo {
+    float: left;
+    height: 1.25em;
+    margin-right: 1em;
+}
+
+/* -- Main -- */
+main {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: linear-gradient(var(--grey-1), var(--grey-2));
+}
+
+section {  
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#result {
+    border: 4px solid white
+}
+
+#result > div {
+    opacity: 0;
+    position: relative;
+    visibility: hidden
+}
+
+#result > div.show {
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in-out 600ms;
+}
+
+#datas {
+    left: 31%;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    transform: translateX(-50%)
+}
+
+#datas.show_data {
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in-out 1200ms
+}
+
+#datas > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--grey-5);
+    opacity: 0.7;
+}
+
+#datas > div div {
+    padding: 1em;
+    width: 10em
+}
+
+#datas > div div h4 {
+    margin-bottom: 0;
+    color: green
+}
+
+.controles {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--grey-5)
+}
+
+.conjunto-controles {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: var(--grey-2);
+    box-shadow: 2px 2px 2px #0001;
+    padding: 1em
+}
+
+fieldset {
+    width: 350px;
+    margin: 0.8em auto;
+    border-style: solid none none none;
+    border-color: var(--grey-1);
+    border-width: 1px;
+    padding: 1em 0
+}
+  
+legend {
+    margin: 0 auto;
+    font-size: 1em
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.25em
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 80%;
+    margin-left: 0.25em;
+    color: var(--control-color);
+    padding: var(--input-padding);
+    font-size: var(--text-size);
+    border-radius: var(--round-corners);
+    border-color: var(--border-color);
+    border-width: 1px;
+    border-style: solid
+}
+
+#consumo-mensal {
+    width: 10em
+}
+
+#custo-instalacao {
+    width: 5em
+}
+
+#tarifa-media {
+    width: 9.5em
+}
+
+#filtro-da-regiao.non-select {
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none
+}
+
+#tarifa-media.non-input {
+    margin: 0;
+    opacity: 0.5;
+    appearance: none;
+    user-select: none;
+    pointer-events: none
+}
+
+#style-button {
+    display: flex;
+    justify-content: center
+}
+
+#calculate {
+    border-radius: 0.25em;
+    background-color: var(--grey-5);
+    transition: background 100ms
+}
+
+#calculate:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+  
+#calculate:active {
+    background-size: 100%;
+    transition: background 100ms;
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+
+
